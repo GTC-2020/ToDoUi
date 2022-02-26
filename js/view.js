@@ -52,10 +52,10 @@ export function showElement(){
     let newElement = createElement();
     newElement.querySelector('p').textContent = list[list.length-1].name;
 
-    if(list[list.length - 1].priority === PRIORITY.HIGH ){
+    if(list[list.length - 1].priority === PRIORITY.HIGH && list[list.length-1].name !== '' ){
         document.querySelector('.high-section').append(newElement);
         deleteElement();
-    } else if (list[list.length - 1].priority === PRIORITY.LOW){
+    } else if (list[list.length - 1].priority === PRIORITY.LOW && list[list.length-1].name !== ''){
         document.querySelector('.low_section').append(newElement);
         deleteElement();
     }    
